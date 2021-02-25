@@ -2,7 +2,7 @@ import UIKit
 
 
 //By deafult dispatch queue is serial queue, second task is execute only after first task completion
-/*
+
 let serialQueue = DispatchQueue(label: "single.queue")
 
 var a:Int = 5
@@ -20,14 +20,13 @@ serialQueue.async {
     print("\(a)")
     print("task 2 finished")
 }
-*/
 
-/*
- */
+
+
 ///Dispatch queue have a attribute called concurrent which is used for performing multiple task.
 ///Here task 2 is already stated before completing task 1
 ///that means task will not wait for another task
-/*let concurrentQueue = DispatchQueue(label: "concurrent.queue", attributes: .concurrent)
+let concurrentQueue = DispatchQueue(label: "concurrent.queue", attributes: .concurrent)
 var b = 5
 concurrentQueue.async {
     print("task 1 started")
@@ -41,7 +40,7 @@ concurrentQueue.async {
     b = 0
     print("value is \(b)")
     print("task 2 complete")
-}*/
+}
 /* Output
  task 1 started
  task 2 started
